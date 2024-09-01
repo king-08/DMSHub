@@ -7350,7 +7350,7 @@ if World1 then
    local MaterialName = Main:Dropdown("Select Material",MaterialList,function(value)
     _G.SelectMaterial = value
    end)
-   Main:Button("Refresh Boss",function()
+   Main:Button("Refresh Material",function()
     MaterialName:Clear()
    end)
    Main:Toggle("Auto Farm Material",_G.AutoFarmBoss,function(value)
@@ -7369,11 +7369,13 @@ if World1 then
                                 EquipWeapon(_G.SelectWeapon)
                                 AutoHaki()
                                     StartMagnet = true
-                                    _G.PosMon = v.HumanoidRootPart.CFrame
-                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,30,1))
-                                    FastAttack = true
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Head.CanCollide = false
+                                    v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,15,5))
+                                    
                                 until not _G.AutoFarmMaterial or not v.Parent or v.Humanoid.Health <= 0
-                                FastAttack = false
+                               
                                 StartMagnet = false
                             end
                         end
