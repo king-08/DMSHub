@@ -6477,7 +6477,7 @@ local Info = Library:Tab("Info")
 local Main = Library:Tab("Main")
 local Setting = Library:Tab("Settings")
 local Race = Library:Tab("Race v4")
---local Mirage = Library:Tab("Mirage")
+local Mirage = Library:Tab("Mirage")
 local Weapon = Library:Tab("Weapons")
 local Stats = Library:Tab("Stats")
 local Combat = Library:Tab("Player")
@@ -6487,7 +6487,7 @@ local DevilFruit = Library:Tab("Fruit")
 local Shop = Library:Tab("Shop")
 local Misc = Library:Tab("Misc")
 --------------------------------------------------------------------
-local Mirragecheck = Race:Label('')
+local Mirragecheck = Mirage:Label('')
 
 task.spawn(function()
     while task.wait() do
@@ -6508,7 +6508,7 @@ task.spawn(function()
         end)
     end
 end)
-local Mirragecheck = Race:Label("")
+local Mirragecheck = Mirage:Label("")
 spawn(function()
 pcall(function()
     while wait() do
@@ -6519,7 +6519,7 @@ Mirragecheck:Set(' Mirage Island Not Found ' )end
     end
 end)
 end)
-Race:Toggle("Teleport To Mirage Island",_G.AutoMysticIsland,function(value)
+Mirage:Toggle("Teleport To Mirage Island",_G.AutoMysticIsland,function(value)
 _G.AutoMysticIsland = value
 StopTween(_G.AutoMysticIsland)
 end)
@@ -6535,7 +6535,7 @@ spawn(function()
         end
     end
 end)
-Race:Toggle("Teleport To Gear",_G.TweenMGear,function(value)
+Mirage:Toggle("Teleport To Gear",_G.TweenMGear,function(value)
 _G.TweenMGear = value
 end)
 
@@ -6556,7 +6556,7 @@ while wait() do
 end
 end)
 end)
-Race:Toggle("ESP Gear",false,function(value)
+Mirage:Toggle("ESP Gear",false,function(value)
 Gear = value
 while Gear do wait()
     UpdateGearPlayer()
