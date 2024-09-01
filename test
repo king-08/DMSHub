@@ -5144,7 +5144,87 @@ World2 = true
 elseif game.PlaceId == 7449423635 then
 World3 = true
 end
-
+function MaterialMon()
+    if _G.SelectMaterial == "Radioactive Material" then
+        MMon = "Factory Staff"
+        MPos = CFrame.new(-507.7895202636719, 72.99479675292969, -126.45632934570312)
+        SP = "Bar"
+    elseif _G.SelectMaterial == "Mystic Droplet" then
+        MMon = "Water Fighter"
+        MPos = CFrame.new(-3214.218017578125, 298.69952392578125, -10543.685546875)
+        SP = "ForgottenIsland"
+    elseif _G.SelectMaterial == "Magma Ore" then
+        if game.PlaceId == 2753915549 then
+            MMon = "Military Spy"
+            MPos = CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875)
+            SP = "Magma"
+        elseif game.PlaceId == 4442272183 then
+            MMon = "Lava Pirate"
+            MPos = CFrame.new(-5234.60595703125, 51.953372955322266, -4732.27880859375)
+            SP = "CircleIslandFire"
+        end
+    elseif _G.SelectMaterial == "Angel Wings" then
+        MMon = "Royal Soldier"
+        MPos = CFrame.new(-7827.15625, 5606.912109375, -1705.5833740234375)
+        SP = "Sky2"
+    elseif _G.SelectMaterial == "Leather" then
+        if game.PlaceId == 2753915549 then
+            MMon = "Pirate"
+            MPos = CFrame.new(-1211.8792724609375, 4.787090301513672, 3916.83056640625)
+            SP = "Pirate"
+        elseif game.PlaceId == 4442272183 then
+            MMon = "Marine Captain"
+            MPos = CFrame.new(-2010.5059814453125, 73.00115966796875, -3326.620849609375)
+            SP = "Greenb"
+        elseif game.PlaceId == 7449423635 then
+            MMon = "Jungle Pirate"
+            MPos = CFrame.new(-11975.78515625, 331.7734069824219, -10620.0302734375)
+            SP = "PineappleTown"
+        end
+    elseif _G.SelectMaterial == "Scrap Metal" then
+        if game.PlaceId == 2753915549 then
+            MMon = "Brute"
+            MPos = CFrame.new(-1132.4202880859375, 14.844913482666016, 4293.30517578125)
+            SP = "Pirate"
+        elseif game.PlaceId == 4442272183 then
+            MMon = "Mercenary"
+            MPos = CFrame.new(-972.307373046875, 73.04473876953125, 1419.2901611328125)
+            SP = "DressTown"
+        elseif game.PlaceId == 7449423635 then
+            MMon = "Pirate Millionaire"
+            MPos = CFrame.new(-289.6311950683594, 43.8282470703125, 5583.66357421875)
+            SP = "Default"
+        end
+    elseif _G.SelectMaterial == "Demonic Wisp" then
+        MMon = "Demonic Soul"
+        MPos = CFrame.new(-9503.388671875, 172.139892578125, 6143.0634765625)
+        SP = "HauntedCastle"
+    elseif _G.SelectMaterial == "Vampire Fang" then
+        MMon = "Vampire"
+        MPos = CFrame.new(-5999.20458984375, 6.437741279602051, -1290.059326171875)
+        SP = "Graveyard"
+    elseif _G.SelectMaterial == "Conjured Cocoa" then
+        MMon = "Chocolate Bar Battler"
+        MPos = CFrame.new(744.7930908203125, 24.76934242248535, -12637.7255859375)
+        SP = "Chocolate"
+    elseif _G.SelectMaterial == "Dragon Scale" then
+        MMon = "Dragon Crew Warrior"
+        MPos = CFrame.new(5824.06982421875, 51.38640213012695, -1106.694580078125)
+        SP = "Hydra1"
+    elseif _G.SelectMaterial == "Gunpowder" then
+        MMon = "Pistol Billionaire"
+        MPos = CFrame.new(-379.6134338378906, 73.84449768066406, 5928.5263671875)
+        SP = "Default"
+    elseif _G.SelectMaterial == "Fish Tail" then
+        MMon = "Fishman Captain"
+        MPos = CFrame.new(-10961.0126953125, 331.7977600097656, -8914.29296875)
+        SP = "PineappleTown"
+    elseif _G.SelectMaterial == "Mini Tusk" then
+        MMon = "Mythological Pirate"
+        MPos = CFrame.new(-13516.0458984375, 469.8182373046875, -6899.16064453125)
+        SP = "BigMansion"
+    end
+end
 function CheckQuest() 
 MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
 if World1 then
@@ -6392,7 +6472,7 @@ end
 spawn(function()
 pcall(function()
     while wait() do
-        if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.AutoFarmCandy or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or AutoFarmChest == true then
+        if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmMaterial or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.AutoFarmCandy or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or AutoFarmChest == true then
             if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                 local Noclip = Instance.new("BodyVelocity")
                 Noclip.Name = "BodyClip"
@@ -6408,7 +6488,7 @@ end)
 spawn(function()
 pcall(function()
     game:GetService("RunService").Stepped:Connect(function()
-        if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.AutoFarmCandy or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or AutoFarmChest == true then
+        if _G.AutoAdvanceDungeon or _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmMaterial or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.AutoFarmCandy or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw or AutoFarmChest == true then
             for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
                 if v:IsA("BasePart") then
                     v.CanCollide = false    
@@ -6421,7 +6501,7 @@ end)
 
 spawn(function()
 while wait() do
-    if _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.AutoFarmCandy or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw == true then
+    if _G.AutoDoughtBoss or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmMaterial or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoOderSword or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.Auto_Kill_Ply or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or _G.AutoBartilo or _G.Auto_DarkBoss or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.Auto_Bone or _G.AutoFarmCandy or _G.Autowaden or _G.Autogay or _G.Autopole or _G.Autosaw == true then
         pcall(function()
             game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("Ken",true)
         end)
@@ -7254,6 +7334,59 @@ AttackNoCD()
 end
 
 end)
+Main:Seperator("َ「 Auto Material 」")
+if World1 then
+    MaterialList = {
+      "Magma Ore","Angel Wings","Leather","Scrap Metal","Radioactive Material"
+    } elseif World2 then
+    MaterialList = {
+      "Mystic Droplet","Magma Ore","Leather","Scrap Metal","Demonic Wisp","Vampire Fang","Radioactive Material"
+    } elseif World3 then
+    MaterialList = {
+      "Leather","Scrap Metal","Vampire Fang","Conjured Cocoa","Dragon Scale","Gunpowder","Fish Tail","Mini Tusk","Radioactive Material"
+    }
+    end
+
+   local MaterialName = Main:Dropdown("Select Material",MaterialList,function(value)
+    _G.SelectMaterial = value
+   end)
+   Main:Button("Refresh Boss",function()
+    MaterialName:Clear()
+   end)
+   Main:Toggle("Auto Farm Material",_G.AutoFarmBoss,function(value)
+    _G.AutoFarmMaterial = value
+   end)
+   spawn(function()
+    while wait() do 
+        if _G.AutoFarmMaterial then
+            MaterialMon()
+            pcall(function()
+                if game:GetService("Workspace").Enemies:FindFirstChild(MMon) then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        if v.Name == MMon then
+                           if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
+                               repeat task.wait()
+                                EquipWeapon(_G.SelectWeapon)
+                                AutoHaki()
+                                    StartMagnet = true
+                                    _G.PosMon = v.HumanoidRootPart.CFrame
+                                    topos(v.HumanoidRootPart.CFrame * CFrame.new(0,30,1))
+                                    FastAttack = true
+                                until not _G.AutoFarmMaterial or not v.Parent or v.Humanoid.Health <= 0
+                                FastAttack = false
+                                StartMagnet = false
+                            end
+                        end
+                    end
+                else
+                if ((MPos).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 4000 then
+                    topos(MPos)
+                    end
+                end
+            end)
+        end
+    end
+end)    
 
 Main:Seperator("「 Ectoplasm 」")
 
