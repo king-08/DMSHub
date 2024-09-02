@@ -6640,10 +6640,12 @@ pcall(function()
 if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
     KitsuneCheck:Set('🏝: Kitsune Island is Spawning 🟢')
 else
-    KitsuneCheck:Set(' Kitsune Island Not Found 🔴' )end
+    KitsuneCheck:Set(' Kitsune Island Not Found 🔴' )
+end
     end
 end)
 end)
+
 Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
    _G.TeleportKitsune = value
     StopTween(_G.TeleportKitsune)
@@ -6680,7 +6682,7 @@ Sea:Slider("Set Azure Ember", 10, 25, _G.SetToTradeAureEmber, function(v)
     _G.SetToTradeAureEmber = v
 end)
 
-Sea:Toggle("Auto Trade Azure Ember", false, "Trade Azure Ember", function(state)
+Sea:Toggle("Auto Trade Azure Ember", false, function(state)
     _G.TradeAureEmber = state
 end)
 
@@ -7448,7 +7450,7 @@ end
     end)
 
     Sea:Label("[ Skill Fruit ]")
-    Sea:Toggle("Skill Z", true function(value)
+    Sea:Toggle("Skill Z", true, function(value)
     _G.SkillFruitZ = value
     end)
     Sea:Toggle("Skill X", true,  function(value)
