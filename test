@@ -6621,6 +6621,18 @@ local DevilFruit = Library:Tab("Fruit")
 local Shop = Library:Tab("Shop")
 local Misc = Library:Tab("Misc")
 --------------------------------------------------------------------
+Info:Label("Credits")
+Info:Label("Dms Hub")
+Info:Label("Ceo : wx.d")
+
+Info:Label("Thanks for using script")
+
+Info:Line()
+
+Info:Button("Copy Discord Link",function()
+Update:Notification("Discord Link Copied")
+setclipboard("https://discord.gg/neyuR2uUqh")
+end)
 local KitsuneCheck = SeaEvent:Label("")
 spawn(function()
 pcall(function()
@@ -7786,18 +7798,7 @@ end)
 
 
 
-Info:Label("Credits")
-Info:Label("Dms Hub")
-Info:Label("Ceo : wx.d")
 
-Info:Label("Thanks for using script")
-
-Info:Line()
-
-Info:Button("Copy Discord Link",function()
-Update:Notification("Discord Link Copied")
-setclipboard("https://discord.gg/neyuR2uUqh")
-end)
 
 
 Setting:Label("「 Setting 」")
