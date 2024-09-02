@@ -6632,10 +6632,10 @@ else
     end
 end)
 end)
-Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
-    _G.TeleportKitsune = value
-    StopTween(_G.TeleportKitsune)
-end) 
+--Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
+  --  _G.TeleportKitsune = value
+    --StopTween(_G.TeleportKitsune)
+--end) 
 
 spawn(function()
     while wait() do
@@ -7621,7 +7621,7 @@ while Gear do wait()
     UpdateGearPlayer()
 end
 end)
-Mirage:Toggle("Teleport Advanced Fruit Dealer",_G.TPNPC,"Tween To Advanced Fruit Dealer",function(value)
+Mirage:Toggle("Teleport Advanced Fruit Dealer",_G.TPNPC,function(value)
     _G.Miragenpc = value
     StopTween(_G.Miragenpc)
 end)
