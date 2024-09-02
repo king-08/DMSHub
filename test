@@ -6632,10 +6632,10 @@ else
     end
 end)
 end)
---Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
-  --  _G.TeleportKitsune = value
-    --StopTween(_G.TeleportKitsune)
---end) 
+Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
+   _G.TeleportKitsune = value
+    StopTween(_G.TeleportKitsune)
+end) 
 
 spawn(function()
     while wait() do
@@ -6997,15 +6997,15 @@ spawn(function()
 end)
 
 
-Sea:Toggle("Auto Farm Shark", _G.AutoKillShark, "Auto Kill Shark", function(value)
+Sea:Toggle("Auto Farm Shark", _G.AutoKillShark,  function(value)
     _G.AutoKillShark = value
     StopTween(_G.AutoKillShark)
 end)
-Sea:Toggle("Auto Farm Piranha", _G.AutoKillPiranha, "Auto Kill Piranha", function(value)
+Sea:Toggle("Auto Farm Piranha", _G.AutoKillPiranha, function(value)
     _G.AutoKillPiranha = value
     StopTween(_G.AutoKillPiranha)
 end)
-Sea:Toggle("Auto Farm Fish Crew", _G.AutoKillFishCrew, "Auto Kill Fish Crew Member", function(value)
+Sea:Toggle("Auto Farm Fish Crew", _G.AutoKillFishCrew,  function(value)
     _G.AutoKillFishCrew = value
     StopTween(_G.AutoKillFishCrew)
 end)
@@ -7149,7 +7149,7 @@ function UpDownPos(pos)
 end
 
 
-Sea:Toggle("Auto Kill Ghost Ship", _G.RelzFishBoat, "Auto Kill Use Skill", function(value)
+Sea:Toggle("Auto Kill Ghost Ship", _G.RelzFishBoat, function(value)
 _G.EtherXFishBoat = value
 StopTween(_G.RelzFishBoat)
 if not _G.EtherXFishBoat then
@@ -7158,12 +7158,12 @@ if not _G.EtherXFishBoat then
 end
 end)
 
-Sea:Toggle("Auto Kill Pirate Brigade", _G.EtherXPirateBrigade, "Auto Kill Enemies Use Skill", function(value)
+Sea:Toggle("Auto Kill Pirate Brigade", _G.EtherXPirateBrigade,  function(value)
 _G.RelzPirateBrigade = value
 StopTween(_G.EtherXPirateBrigade)
 end)
 
-Sea:Toggle("Auto Kill Pirate Grand Brigade", _G.EtherXPirateGrandBrigade, "Auto Kill Enemies Use Skill", function(value)
+Sea:Toggle("Auto Kill Pirate Grand Brigade", _G.EtherXPirateGrandBrigade,  function(value)
 _G.EtherXPirateGrandBrigade = value
 StopTween(_G.EtherXPirateGrandBrigade)
 end)
@@ -7194,12 +7194,12 @@ end)
 --         end
 --     end)
 
-Sea:Toggle("Auto Kill Terrorshark", _G.AutoTerrorshark,false,function(value)
+Sea:Toggle("Auto Kill Terrorshark", _G.AutoTerrorshark,function(value)
     _G.AutoTerrorshark = value
    StopTween( _G.AutoTerrorshark)
 end)
 
-Sea:Toggle('Auto Kill Seabest', false, false, function(value)
+Sea:Toggle('Auto Kill Seabest', false, function(value)
     _G.AutoSeaBest = value
     StopTween(_G.AutoSeaBest)
     if not _G.AutoSeaBest then
@@ -7422,56 +7422,56 @@ end
             end)
         end
     end)
-    Sea:Toggle("Use Skill Devil Fruit", true, "Use Fruit Skill", function(value)
+    Sea:Toggle("Use Skill Devil Fruit", true, function(value)
         _G.UseSeaFruitSkill = value
     end)
-    Sea:Toggle("Use Skill Melee", true, "Use Melee Skill", function(value)
+    Sea:Toggle("Use Skill Melee", true, function(value)
         _G.UseSeaMeleeSkill = value
     end)
-    Sea:Toggle("Use Skill Sword", true, "Use Sword Skill", function(value)
+    Sea:Toggle("Use Skill Sword", true,  function(value)
         _G.UseSeaSwordSkill = value
     end)
-    Sea:Toggle("Use Skill Gun", true, "Use Gun Skill", function(value)
+    Sea:Toggle("Use Skill Gun", true, function(value)
         _G.UseSeaGunSkill = value
     end)
 
     Sea:Label("[ Skill Fruit ]")
-    Sea:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+    Sea:Toggle("Skill Z", true function(value)
     _G.SkillFruitZ = value
     end)
-    Sea:Toggle("Skill X", true, "Auto Skill X", function(value)
+    Sea:Toggle("Skill X", true,  function(value)
     _G.SkillFruitX = value
     end)
-    Sea:Toggle("Skill C", true, "Auto Skill C", function(value)
+    Sea:Toggle("Skill C", true,  function(value)
     _G.SkillFruitC = value
     end)
-    Sea:Toggle("Skill V", false, "Auto Skill V", function(value)
+    Sea:Toggle("Skill V", false,  function(value)
     _G.SkillFruitV = value
     end)
-    Sea:Toggle("Skill F", _G.SkillFruitF, "Auto Skill F", function(value)
+    Sea:Toggle("Skill F", _G.SkillFruitF,  function(value)
     _G.SkillFruitF = value
     end)
 
     Sea:Label("[ Skill Melee ]")
-    Sea:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+    Sea:Toggle("Skill Z", true,  function(value)
     _G.SkillMeleeZ = value
     end)
-    Sea:Toggle("Skill X", true, "Auto Skill X", function(value)
+    Sea:Toggle("Skill X", true,  function(value)
     _G.SkillMeleeX = value
     end)
-    Sea:Toggle("Skill C", true, "Auto Skill C", function(value)
+    Sea:Toggle("Skill C", true,  function(value)
     _G.SkillMeleeC = value
     end)
-    Sea:Toggle("Skill V", _G.SkillMeleeV, "Auto Skill V", function(value)
+    Sea:Toggle("Skill V", _G.SkillMeleeV, function(value)
     _G.SkillMeleeV = value
     end)
 
     Sea:Label("[ Skill Sword & Gun ]")
-    Sea:Toggle("Skill Z", true, "Auto Skill Z", function(value)
+    Sea:Toggle("Skill Z", true,  function(value)
     _G.SkillSwordZ = value
     _G.SkillGunZ = value
     end)
-    Sea:Toggle("Skill X", true, "Auto Skill X", function(value)
+    Sea:Toggle("Skill X", true,  function(value)
     _G.SkillSwordX = value
     _G.SkillGunX = value
     end)
