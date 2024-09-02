@@ -6646,10 +6646,10 @@ end
 end)
 end)
 
-Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
-   _G.TeleportKitsune = value
-    StopTween(_G.TeleportKitsune)
-end) 
+--Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
+  -- _G.TeleportKitsune = value
+  --  StopTween(_G.TeleportKitsune)
+--end) 
 
 spawn(function()
     while wait() do
