@@ -7651,11 +7651,7 @@ end
     end)
 
     
-    if World1 or World2 then
-        RaceV4:Label("Go to Third Sea")
-        end
-if World3 then        
-    
+  
 local FullMoon = Race:Label("")
 task.spawn(function()
     while task.wait() do
@@ -8076,7 +8072,7 @@ Race:Button("Buy Ancient One Quest",function(t)
     end)
 
 
-end
+
 
 
 
