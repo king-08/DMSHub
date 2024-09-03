@@ -7922,7 +7922,7 @@ Race:Toggle("Get Race v4",_G.winv4,function(value)
 _G.winv4 = value
 StopTween(_G.winv4)
 end)
-Race:Toggle("Auto Trail Race V4",false,false,function(v)
+Race:Toggle("Auto Trail Race V4",false,function(v)
     _G.AutoQuestRace = v
     StopTween(_G.AutoQuestRace)
     end)
