@@ -7914,6 +7914,10 @@ end)
 
 
 Race:Seperator("َAuto Race")
+Race:Toggle("Auto Kill Player in Trail",false,function(value)
+    _G.AutoKillTial = value
+    StopTween(_G.AutoKillTial)
+    end)
 Race:Toggle("Get Race v4",_G.winv4,function(value)
 _G.winv4 = value
 StopTween(_G.winv4)
@@ -7968,9 +7972,16 @@ end
 end)
 end)   
  
-Race:Toggle("Auto Kill Player in Trail",false,function(Val)
-    _G.AutoKillTial = Val
-    StopTween(_G.AutoKillTial)
+Race:Button("Auto Complete Angel Trial",function(t)
+    topos(game.Workspace.Map.SkyTrial.Model.FinishPart.CFrame)
+    end)
+
+    Race:Button("Auto Complete Rabbit Trial",function(t)
+    topos(game:GetService("Workspace").Map.MinkTrial.Ceiling.CFrame * CFrame.new(0,-5,0))
+    end)
+
+    Race:Button("Auto Complete Cyborg Trial",function(t)
+    topos(CFrame.new(0,300,0))
     end)
  
     spawn(function()
