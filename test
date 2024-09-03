@@ -6633,7 +6633,7 @@ Info:Button("Copy Discord Link",function()
 Update:Notification("Discord Link Copied")
 setclipboard("https://discord.gg/neyuR2uUqh")
 end)
-local KitsuneCheck = Sea:Label("")
+local KitsuneCheck = Mirage:Label("")
 spawn(function()
 pcall(function()
     while wait() do
@@ -6646,7 +6646,7 @@ end
 end)
 end)
 
-Sea:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
+Mirage:Toggle("Teleport To Kitsune Island",_G.TeleportKitsune,function(value)
    _G.TeleportKitsune = value
     StopTween(_G.TeleportKitsune)
 end) 
@@ -6661,7 +6661,7 @@ spawn(function()
     end
 end)
 
-Sea:Toggle("Auto Collect Azure",_G.CollectAzure,function(value)
+Mirage:Toggle("Auto Collect Azure",_G.CollectAzure,function(value)
 _G.CollectAzure = value
 end) 
 
@@ -6678,11 +6678,11 @@ spawn(function()
 end)
 
 _G.SetToTradeAureEmber = 20
-Sea:Slider("Set Azure Ember", 10, 25, _G.SetToTradeAureEmber, function(v)
+Mirage:Slider("Set Azure Ember", 10, 25, _G.SetToTradeAureEmber, function(v)
     _G.SetToTradeAureEmber = v
 end)
 
-Sea:Toggle("Auto Trade Azure Ember", false, function(state)
+Mirage:Toggle("Auto Trade Azure Ember", false, function(state)
     _G.TradeAureEmber = state
 end)
 
@@ -6708,7 +6708,7 @@ spawn(function()
         end
     end
 end)
-Sea:Seperator("「 Sea Events 」")
+Mirage:Seperator("「 Sea Events 」")
 local ListSeaBoat = {
     "Guardian",
     "PirateGrandBrigade",
@@ -6731,17 +6731,17 @@ local ListSeaZone = {
 }
 
 _G.SelectedBoat = "Guardian"
-Sea:Dropdown("Select Boat", ListSeaBoat, _G.SelectedBoat, function(x)
+Mirage:Dropdown("Select Boat", ListSeaBoat, _G.SelectedBoat, function(x)
 _G.SelectedBoat = x
 end)
 
 _G.SelectedZone = "Zone 5"
-Sea:Dropdown("Select Zone", ListSeaZone, _G.SelectedZone, function(x)
+Mirage:Dropdown("Select Zone", ListSeaZone, _G.SelectedZone, function(x)
 _G.SelectedZone = x
 end)
 
 BoatSpeed = 300
-Sea:Slider("Boat Tween Speed", 100, 350, BoatSpeed, function(v)
+Mirage:Slider("Boat Tween Speed", 100, 350, BoatSpeed, function(v)
     BoatSpeed = v
 end)
 
@@ -6767,7 +6767,7 @@ spawn(function()
     end)
 end)
 
-Sea:Toggle("Auto Sail Boat", _G.SailBoat, function(state)
+Mirage:Toggle("Auto Sail Boat", _G.SailBoat, function(state)
     _G.SailBoat = state
     StopTween(_G.SailBoat)
     stopboat:Stop()
@@ -7011,15 +7011,15 @@ spawn(function()
 end)
 
 
-Sea:Toggle("Auto Farm Shark", _G.AutoKillShark,  function(value)
+Mirage:Toggle("Auto Farm Shark", _G.AutoKillShark,  function(value)
     _G.AutoKillShark = value
     StopTween(_G.AutoKillShark)
 end)
-Sea:Toggle("Auto Farm Piranha", _G.AutoKillPiranha, function(value)
+Mirage:Toggle("Auto Farm Piranha", _G.AutoKillPiranha, function(value)
     _G.AutoKillPiranha = value
     StopTween(_G.AutoKillPiranha)
 end)
-Sea:Toggle("Auto Farm Fish Crew", _G.AutoKillFishCrew,  function(value)
+Mirage:Toggle("Auto Farm Fish Crew", _G.AutoKillFishCrew,  function(value)
     _G.AutoKillFishCrew = value
     StopTween(_G.AutoKillFishCrew)
 end)
@@ -7163,7 +7163,7 @@ function UpDownPos(pos)
 end
 
 
-Sea:Toggle("Auto Kill Ghost Ship", _G.RelzFishBoat, function(value)
+Mirage:Toggle("Auto Kill Ghost Ship", _G.RelzFishBoat, function(value)
 _G.EtherXFishBoat = value
 StopTween(_G.RelzFishBoat)
 if not _G.EtherXFishBoat then
@@ -7172,12 +7172,12 @@ if not _G.EtherXFishBoat then
 end
 end)
 
-Sea:Toggle("Auto Kill Pirate Brigade", _G.EtherXPirateBrigade,  function(value)
+Mirage:Toggle("Auto Kill Pirate Brigade", _G.EtherXPirateBrigade,  function(value)
 _G.RelzPirateBrigade = value
 StopTween(_G.EtherXPirateBrigade)
 end)
 
-Sea:Toggle("Auto Kill Pirate Grand Brigade", _G.EtherXPirateGrandBrigade,  function(value)
+Mirage:Toggle("Auto Kill Pirate Grand Brigade", _G.EtherXPirateGrandBrigade,  function(value)
 _G.EtherXPirateGrandBrigade = value
 StopTween(_G.EtherXPirateGrandBrigade)
 end)
@@ -7208,12 +7208,12 @@ end)
 --         end
 --     end)
 
-Sea:Toggle("Auto Kill Terrorshark", _G.AutoTerrorshark,function(value)
+Mirage:Toggle("Auto Kill Terrorshark", _G.AutoTerrorshark,function(value)
     _G.AutoTerrorshark = value
    StopTween( _G.AutoTerrorshark)
 end)
 
-Sea:Toggle('Auto Kill Seabest', false, function(value)
+Mirage:Toggle('Auto Kill Seabest', false, function(value)
     _G.AutoSeaBest = value
     StopTween(_G.AutoSeaBest)
     if not _G.AutoSeaBest then
@@ -7260,11 +7260,11 @@ end
     --             end
     --         end
     --     end)
-    Sea:Seperator("「 Settings 」")
-    Sea:Toggle("No Clip Rock", false, function(state)
+    Mirage:Seperator("「 Settings 」")
+    Mirage:Toggle("No Clip Rock", false, function(state)
         _G.NoClipRock = state
         end)
-        Sea:Toggle("Auto Press W", _G.AutoPressW,function(state)
+        Mirage:Toggle("Auto Press W", _G.AutoPressW,function(state)
             _G.AutoPressW = state 
             end)
             spawn(function()
@@ -7436,56 +7436,56 @@ end
             end)
         end
     end)
-    Sea:Toggle("Use Skill Devil Fruit", true, function(value)
+    Mirage:Toggle("Use Skill Devil Fruit", true, function(value)
         _G.UseSeaFruitSkill = value
     end)
-    Sea:Toggle("Use Skill Melee", true, function(value)
+    Mirage:Toggle("Use Skill Melee", true, function(value)
         _G.UseSeaMeleeSkill = value
     end)
-    Sea:Toggle("Use Skill Sword", true,  function(value)
+    Mirage:Toggle("Use Skill Sword", true,  function(value)
         _G.UseSeaSwordSkill = value
     end)
-    Sea:Toggle("Use Skill Gun", true, function(value)
+    Mirage:Toggle("Use Skill Gun", true, function(value)
         _G.UseSeaGunSkill = value
     end)
 
-    Sea:Label("[ Skill Fruit ]")
-    Sea:Toggle("Skill Z", true, function(value)
+    Mirage:Label("[ Skill Fruit ]")
+    Mirage:Toggle("Skill Z", true, function(value)
     _G.SkillFruitZ = value
     end)
-    Sea:Toggle("Skill X", true,  function(value)
+    Mirage:Toggle("Skill X", true,  function(value)
     _G.SkillFruitX = value
     end)
-    Sea:Toggle("Skill C", true,  function(value)
+    Mirage:Toggle("Skill C", true,  function(value)
     _G.SkillFruitC = value
     end)
-    Sea:Toggle("Skill V", false,  function(value)
+    Mirage:Toggle("Skill V", false,  function(value)
     _G.SkillFruitV = value
     end)
-    Sea:Toggle("Skill F", _G.SkillFruitF,  function(value)
+    Mirage:Toggle("Skill F", _G.SkillFruitF,  function(value)
     _G.SkillFruitF = value
     end)
 
-    Sea:Label("[ Skill Melee ]")
-    Sea:Toggle("Skill Z", true,  function(value)
+    Mirage:Label("[ Skill Melee ]")
+    Mirage:Toggle("Skill Z", true,  function(value)
     _G.SkillMeleeZ = value
     end)
-    Sea:Toggle("Skill X", true,  function(value)
+    Mirage:Toggle("Skill X", true,  function(value)
     _G.SkillMeleeX = value
     end)
-    Sea:Toggle("Skill C", true,  function(value)
+    Mirage:Toggle("Skill C", true,  function(value)
     _G.SkillMeleeC = value
     end)
-    Sea:Toggle("Skill V", _G.SkillMeleeV, function(value)
+    Mirage:Toggle("Skill V", _G.SkillMeleeV, function(value)
     _G.SkillMeleeV = value
     end)
 
-    Sea:Label("[ Skill Sword & Gun ]")
-    Sea:Toggle("Skill Z", true,  function(value)
+    Mirage:Label("[ Skill Sword & Gun ]")
+    Mirage:Toggle("Skill Z", true,  function(value)
     _G.SkillSwordZ = value
     _G.SkillGunZ = value
     end)
-    Sea:Toggle("Skill X", true,  function(value)
+    Mirage:Toggle("Skill X", true,  function(value)
     _G.SkillSwordX = value
     _G.SkillGunX = value
     end)
