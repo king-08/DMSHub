@@ -3772,7 +3772,7 @@ Hub1.BackgroundTransparency = 1.000
 Hub1.Position = UDim2.new(0, 130, 0, 0)
 Hub1.Size = UDim2.new(0, 50, 0, 27)
 Hub1.Font = Enum.Font.Code
-Hub1.Text = "|"
+Hub1.Text = "| .gg/dmns"
 Hub1.TextColor3 = Color3.fromRGB(255,255,255)
 Hub1.TextSize = 15.000
 
@@ -3784,7 +3784,7 @@ BindButton.BackgroundTransparency = 1.000
 BindButton.Position = UDim2.new(0.865561002, 0, 0, 0)
 BindButton.Size = UDim2.new(0, 100, 0, 27)
 BindButton.Font = Enum.Font.Code
-BindButton.Text = "[LeftControl]"
+BindButton.Text = "[LeftCtrl]"
 BindButton.TextColor3 = Color3.fromRGB(255,255,255)
 BindButton.TextSize = 14.000
 BindButton.Visible = true
@@ -6621,7 +6621,7 @@ local Shop = Library:Tab("Shop")
 local Misc = Library:Tab("Misc")
 --------------------------------------------------------------------
 Info:Label("Credits")
-Info:Label("Dms Hub")
+Info:Label("DMS Hub")
 Info:Label("Ceo : wx.d")
 
 Info:Label("Thanks for using script")
@@ -6630,7 +6630,7 @@ Info:Line()
 
 Info:Button("Copy Discord Link",function()
 Update:Notification("Discord Link Copied")
-setclipboard("https://discord.gg/neyuR2uUqh")
+setclipboard("https://discord.gg/dmns")
 end)
 local KitsuneCheck = Mirage:Label("")
 spawn(function()
@@ -8426,7 +8426,7 @@ for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) 
     SelectWeapona:Add(v.Name)
 end
 end)
-Update:Notification("Hello, "  ..game.Players.LocalPlayer.DisplayName.. " Welcome DMS Hub! Thanks for using the script | [+] Race v4 [+] Auto CDK quest [+] Auto SoulGuitar | version 1.5.0")
+Update:Notification("Hello, "  ..game.Players.LocalPlayer.DisplayName.. " Welcome Back To DMS Hub! Thanks For Using The Script | [+] Race v4 [+] Sea Events [+] Mirage & Kitsune Islands | version 2.0.0 ")
 
 Main:Seperator("َ「 Auto Farm 」")
 
