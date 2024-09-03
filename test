@@ -6610,8 +6610,7 @@ local Info = Library:Tab("Info")
 local Main = Library:Tab("Main")
 local Setting = Library:Tab("Settings")
 local Race = Library:Tab("Race v4")
-local Mirage = Library:Tab("Mirage")
-local Sea = Library:Tab("SeaEvent")
+local Mirage = Library:Tab("Sea Events")
 local Weapon = Library:Tab("Weapons")
 local Stats = Library:Tab("Stats")
 local Combat = Library:Tab("Player")
@@ -7744,6 +7743,54 @@ Race:Button("Teleport To Acient One",function()
   
   ProximityPrompt.Triggered:Connect(onProximity)
   end)
+  Race:Button("Clock Acces", function()
+    game:GetService("Workspace").Map["Temple of Time"].DoNotEnter:Remove()
+    game:GetService("Workspace").Map["Temple of Time"].ClockRoomExit:Remove()
+end)
+
+Race:Toggle("Auto Buy Gear",_G.Auto_Farm_Bone4,false,function(value)
+ _G.Auto_Farm_Bone4 = value
+ StopTween(_G.Auto_Farm_Bone4)
+end)
+spawn(function()
+    pcall(function()
+        while wait(0.1) do
+            if _G.Auto_Farm_Bone4 then
+    local args = {
+    [1] = true
+}
+
+local args = {
+    [1] = "UpgradeRace",
+    [2] = "Buy"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+            end
+end 
+end)  
+end)
+
+Race:Toggle("Tween Gear",_G.TweenMGear,function(value)
+_G.TweenMGear = value
+StopTween(_G.TweenMGear)
+end)
+
+Race:Toggle("Auto Look Moon",false,function(v)
+  _G.AutoDooHee = v
+  end)
+  spawn(function()
+    while wait() do
+		pcall(function()
+			if _G.AutoDooHee then
+			    wait()
+				local moonDir = game.Lighting:GetMoonDirection()
+                local lookAtPos = game.Workspace.CurrentCamera.CFrame.p + moonDir * 100
+                game.Workspace.CurrentCamera.CFrame = CFrame.lookAt(game.Workspace.CurrentCamera.CFrame.p, lookAtPos)
+			end
+		end)
+    end
+end)
 Race:Button("Teleport To Your Race Door",function()
 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
 wait()
