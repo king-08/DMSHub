@@ -3260,7 +3260,7 @@ function RadientPaid:Window(text,maincolor)
     end
     return ServerHold
 end
-local loadedKey = game:HttpGet('https://pastebin.com/raw/qQ14mhD2')
+local loadedKey = game:HttpGet('https://pastebin.com/raw/2qBLfn6M')
 
 function LoadHub()
 local LoliHub = Instance.new("ScreenGui")
@@ -8426,7 +8426,7 @@ for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) 
     SelectWeapona:Add(v.Name)
 end
 end)
-Update:Notification("Hello, "  ..game.Players.LocalPlayer.DisplayName.. " Welcome Back To DMS Hub! Thanks For Using The Script | [+] Race v4 [+] Sea Events [+] Mirage & Kitsune Islands | version 2.0.0 ")
+Update:Notification("Hello, "  ..game.Players.LocalPlayer.DisplayName.. " Welcome Back To DMS Hub! Thanks For Using The Script | [+] Race v4 [+] Sea Events [+] Mirage & Kitsune Islands [+] Auto Farm Materials | version 2.0.0 ")
 
 Main:Seperator("َ「 Auto Farm 」")
 
@@ -14927,11 +14927,11 @@ end
 end)
 main:Button("Copy Key Link",function()
 RadientPaid:Notification("Done copied","Key Link Copied","Ok")
-setclipboard("https://direct-link.net/938887/dms-hub-key")
+setclipboard("https://link-center.net/938887/dms-hub-key-system")
 end)
 main:Button("Copy Discord Link",function()
 RadientPaid:Notification("Done copied","Discord Link Copied","Ok")
-setclipboard("https://discord.gg/neyuR2uUqh")
+setclipboard("https://discord.gg/dmns")
 
 end)
 main:Label("Now when u put the correct key you dont need to get it again")
