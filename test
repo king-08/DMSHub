@@ -7652,19 +7652,19 @@ end
 
     
   
-local FullMoon = Race:Label("")
+	local FullMoon = Race:Label("")
 task.spawn(function()
     while task.wait() do
         pcall(function()
-            if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
+            if game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
                 FullMoon:Set("🌕: Full Moon 100%")
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" then
-                FullMoon:Set("🌖’ : Full Moon 75%")
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                FullMoon:Set("🌗“ : Full Moon 50%")
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                FullMoon:Set("🌘 : Full Moon 25%")
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
+                FullMoon:Set("🌖: Full Moon 75%")
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
+                FullMoon:Set("🌗: Full Moon 50%")
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
+                FullMoon:Set("🌘: Full Moon 25%")
+            elseif game:GetService("Lighting").Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
                 FullMoon:Set("🌘: Full Moon 15%")
             else
                 FullMoon:Set("🌑: Full Moon 0%")
@@ -7672,22 +7672,25 @@ task.spawn(function()
         end)
     end
 end)
-Race:Button("Teleport To Top Of GreatTree",function()
-topos(CFrame.new(2947.556884765625, 2281.630615234375, -7213.54931640625))
+ 
+Race:Button("Teleport To Top Of GreatTree", function()
+    topos(CFrame.new(2947.556884765625, 2281.630615234375, -7213.54931640625))
 end)
-Race:Button("Teleport To Timple Of Time",function()
-Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
+ 
+Race:Button("Teleport To Temple Of Time", function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
 end)
-Race:Button("Teleport To Lever Pull",function()
-topos(CFrame.new(28575.1816, 14937.8594, 72.3163681))
+ 
+Race:Button("Teleport To Lever Pull", function()
+    topos(CFrame.new(28575.1816, 14937.8594, 72.3163681))
 end)
-
-Race:Button("Teleport To gear",function()
-for _,v in next, workspace:GetDescendants() do
-if v.Name == "Prompt" then
-topos(v.CFrame)
-end
-end
+ 
+Race:Button("Teleport To Gear", function()
+    for _, v in next, workspace:GetDescendants() do
+        if v.Name == "Prompt" then
+            topos(v.CFrame)
+        end
+    end
 end)
 Race:Button("Unlock Lever", function()
     venyx:Notify("Unlocked")
