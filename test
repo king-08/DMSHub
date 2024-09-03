@@ -8108,7 +8108,7 @@ Race:Button("Buy Ancient One Quest",function(t)
           Race:Button("Auto Complete Cyborg Trial",function(t)
           topos(CFrame.new(0,300,0))
           end)
-      end
+      
       
       spawn(function()
           while wait() do
