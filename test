@@ -7690,7 +7690,60 @@ topos(v.CFrame)
 end
 end
 end)
-
+Race:Button("Teleport To Acient One",function()
+    topos(CFrame.new(28981.552734375, 14888.4267578125, -120.245849609375))
+  end)
+     
+  Race:Button("Unlock Lever", function()
+    Update:Notification("Unlocked")
+  if game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt") then
+      game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
+  end
+  wait(0.1)
+  local ProximityPrompt = Instance.new("ProximityPrompt")
+  ProximityPrompt.Parent = game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt
+  ProximityPrompt.MaxActivationDistance = 10
+  ProximityPrompt.ActionText = "Secrets Beholds Inside"
+  ProximityPrompt.ObjectText = "An unknown lever of time"
+  
+  function onProximity()
+  local part = game:GetService("Workspace").Map["Temple of Time"].MainDoor1
+  local TweenService = game:GetService("TweenService")
+  
+  local startPosition = part.Position
+  local endPosition = startPosition + Vector3.new(0, -50, 0)
+  
+  local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+  local tween = TweenService:Create(part, tweenInfo, {Position = endPosition})
+  
+  tween:Play()
+  
+  local partnew = game:GetService("Workspace").Map["Temple of Time"].MainDoor2
+  local TweenService = game:GetService("TweenService")
+  
+  local startPosition = partnew.Position
+  local endPosition = startPosition + Vector3.new(0, -50, 0)
+  
+  local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+  local tween = TweenService:Create(partnew, tweenInfo, {Position = endPosition})
+  
+  tween:Play()
+  
+  local SoundSFX = Instance.new("Sound")
+  SoundSFX.Parent = workspace
+  SoundSFX.SoundId = "rbxassetid://1904813041"
+  SoundSFX:Play()
+  SoundSFX.Name = "POwfpxzxzfFfFF"
+  game:GetService("Workspace").Map["Temple of Time"].Lever.Prompt:FindFirstChild("ProximityPrompt"):Remove()
+  wait(5)
+  workspace:FindFirstChild("POwfpxzxzfFfFF"):Remove()
+  game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
+  game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
+  game:GetService("Workspace").Map["Temple of Time"].NoGlitching:Remove()
+  end
+  
+  ProximityPrompt.Triggered:Connect(onProximity)
+  end)
 Race:Button("Teleport To Your Race Door",function()
 Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
 wait()
@@ -9418,7 +9471,7 @@ Weapon:Toggle("Auto Pole v1", _G.Autopole,function(value)
 StopTween( _G.Autopole)
 end)
 
-Weapon:Toggle("Auto Pole v1 Hop", _G.AutodoughkingHop,function(value)
+Weapon:Toggle("Auto Pole v1 Hop", _G.Autopolehop,function(value)
  _G.Autopolehop = value
 end)
 
