@@ -6610,7 +6610,8 @@ local Info = Library:Tab("Info")
 local Main = Library:Tab("Main")
 local Setting = Library:Tab("Settings")
 local Race = Library:Tab("Race v4")
-local Mirage = Library:Tab("Sea Events")
+local Mirage = Library:Tab("Mirage")
+local Sea = Library:Tab("SeaEvent")
 local Weapon = Library:Tab("Weapons")
 local Stats = Library:Tab("Stats")
 local Combat = Library:Tab("Player")
@@ -6948,7 +6949,7 @@ spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Fish Crew Member") then
                             if v.Name == "Fish Crew Member" then
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeattask.wait()
+                                repeat task.wait(_G.FastAttackDelay)
                                     AutoHaki()
                                     EquipWeapon(_G.SelectWeapon)
                                     topos(v.HumanoidRootPart.CFrame * Pos)
@@ -7061,7 +7062,7 @@ spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Piranha") then
                             if v.Name == "Piranha" then
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat task.wait()
+                                repeat task.wait(_G.FastAttackDelay)
                                     AutoHaki()
                                     EquipWeapon(_G.SelectWeapon)
                                     topos(v.HumanoidRootPart.CFrame * Pos)
@@ -7077,7 +7078,7 @@ spawn(function()
                         if game:GetService("Workspace").Enemies:FindFirstChild("Shark") then
                             if v.Name == "Shark" then
                                 if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                                repeat task.wait()
+                                repeat task.wait(_G.FastAttackDelay)
                                     AutoHaki()
                                     EquipWeapon(_G.SelectWeapon)
                                     topos(v.HumanoidRootPart.CFrame * Pos)
@@ -9417,7 +9418,7 @@ Weapon:Toggle("Auto Pole v1", _G.Autopole,function(value)
 StopTween( _G.Autopole)
 end)
 
-Weapon:Toggle("Auto Pole v1 Hop", _G.Autopolehop,function(value)
+Weapon:Toggle("Auto Pole v1 Hop", _G.AutodoughkingHop,function(value)
  _G.Autopolehop = value
 end)
 
@@ -9642,7 +9643,7 @@ spawn(function()
                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                        if v.Name == "Dough King" then
                            if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v.Humanoid.Health > 0 then
-                               repeat task.wait()
+                               repeat task.wait(_G.FastAttackDelay)
                                    AutoHaki()
                                    EquipWeapon(_G.SelectWeapon)
                                    v.HumanoidRootPart.CanCollide = false
