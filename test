@@ -10488,7 +10488,9 @@ local Total_Elite_Hunter = Weapon:Label("")
 
 spawn(function()
 while wait() do
-    Total_Elite_Hunter:Set("Total Elite Hunter Killed : "..game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter","Progress"))
+    local progress = game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("EliteHunter", "Progress")
+    print("EliteHunter Progress:", progress)
+    Total_Elite_Hunter:Set("Total Elite Hunter Killed : " .. (progress or "N/A"))
 end
 end)
 Weapon:Toggle("Auto Yama",_G.AutoYama,function(value)
