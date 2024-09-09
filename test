@@ -5884,33 +5884,33 @@ elseif World3 then
         CFrameQuest = CFrame.new(-1150.0400390625, 20.378934860229492, -14446.3349609375)
         CFrameMon = CFrame.new(-880.2006225585938, 71.24776458740234, -14538.609375)
     elseif MyLevel == 2450 or MyLevel <= 2474 then
-        Mon = "Isle Outlaw [Lv. 2450]"
+        Mon = "Isle Outlaw"
         LevelQuest = 1
         NameQuest = "TikiQuest1"
         NameMon = "Isle Outlaw"
         CFrameQuest = CFrame.new(-16545.9355, 55.6863556, -173.230499)
         CFrameMon = CFrame.new(-16120.6035, 116.520554, -103.038849)
-    elseif MyLevel == 2475 or MyLevel <= 2499 then
-            Mon = "Island Boy [Lv. 2475]"
-            LevelQuest = 2
-            NameQuest = "TikiQuest1"
-            NameMon = "Island Boy"
-            CFrameQuest = CFrame.new(-16545.9355, 55.6863556, -173.230499)
-            CFrameMon = CFrame.new(-16751.3125, 121.226219, -264.015015)
-        elseif MyLevel == 2500 or MyLevel <= 2524 then
-            Mon = "Sun-kissed Warrior [Lv. 2500]"
-            LevelQuest = 1
-            NameQuest = "TikiQuest2"
-            NameMon = "Sun-kissed Warrior"
-            CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
-            CFrameMon = CFrame.new(-16294.6748, 32.7874393, 1062.4856)
-        elseif MyLevel >= 2525 then
-            Mon = "Isle Champion [Lv. 2525]"
-            LevelQuest = 2
-            NameQuest = "TikiQuest2"
-            NameMon = "Isle Champion"
-            CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
-            CFrameMon = CFrame.new(-16933.2129, 93.3503036, 999.450989)
+    elseif MyLevel == 2475 or MyLevel <= 2524 then
+        Mon = "Island Boy"
+        LevelQuest = 2
+        NameQuest = "TikiQuest1"
+        NameMon = "Island Boy"
+        CFrameQuest = CFrame.new(-16545.9355, 55.6863556, -173.230499)
+        CFrameMon = CFrame.new(-16751.3125, 121.226219, -264.015015)
+    -- elseif MyLevel == 2500 or MyLevel <= 2524 then
+            --     Mon = "Sun-kissed Warrior"
+            --     LevelQuest = 1
+            --     NameQuest = "TikiQuest2"
+            --     NameMon = "Sun-kissed Warrior"
+            --     CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
+            --     CFrameMon = CFrame.new(-16349.8779296875, 92.0808334350586, 1123.4169921875)
+    elseif MyLevel >= 2525 then
+        Mon = "Isle Champion"
+        LevelQuest = 2
+        NameQuest = "TikiQuest2"
+        NameMon = "Isle Champion"
+        CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
+        CFrameMon = CFrame.new(-16933.2129, 93.3503036, 999.450989)
     end
 end
 end
