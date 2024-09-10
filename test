@@ -10041,7 +10041,7 @@ while wait() do
     end
 end
 end)
-Main:Toggle("Auto Kill Dough King", _G.Autodoughking,function(value)
+Weapon:Toggle("Auto Kill Dough King", _G.Autodoughking,function(value)
     _G.Autodoughking = value
    StopTween( _G.Autodoughking)
 end)
