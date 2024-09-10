@@ -8589,7 +8589,7 @@ _G.BringMonster = value
 end)
 
 Main:Toggle("Fast Attack",true,function(Fast)
-_G.FastAttack = Fast
+_G.FastAttack2 = Fast
 end)
 
 
